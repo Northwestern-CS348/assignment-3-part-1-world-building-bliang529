@@ -26,22 +26,27 @@ fact: (on disk4 disk5)
 fact: (on disk3 disk4)
 fact: (on disk2 peg2)
 fact: (on disk1 peg3)
+
 fact: (disk disk1)
 fact: (disk disk2)
 fact: (disk disk3)
 fact: (disk disk4)
 fact: (disk disk5)
+
 fact: (peg peg1)
 fact: (peg peg2)
 fact: (peg peg3)
+
 fact: (top disk3)
 fact: (top disk2)
 fact: (top disk1)
+
 fact: (larger disk2 disk1)
 fact: (larger disk3 disk2)
 fact: (larger disk3 disk1)
 
 rule: ((on ?x ?y) (on ?y ?z) (disk ?x) (disk ?y)) -> (on ?x ?z)
-rule: ((on ?x ?y) (disk ?x) (disk ?y)) -> (larger ?y ?x)
+rule: ((on ?x ?y) (disk ?y)) -> (larger ?y ?x)
+rule: ((larger ?x ?y) (larger ?z ?x)) -> (larger ?z ?y)
 rule: ((top ?x) (peg ?y) (on ?x ?y) (top ?a) (larger ?a ?x) (on ?a ?b) (peg ?b)) -> (movable ?x ?y ?b)
 rule: ((top ?x) (peg ?y) (on ?x ?y) (top ?z) (peg ?z)) -> (movable ?x ?y ?z)

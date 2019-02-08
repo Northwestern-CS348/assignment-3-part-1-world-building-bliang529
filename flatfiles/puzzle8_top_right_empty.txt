@@ -17,7 +17,6 @@ fact: (pred obj1 obj2)
 rule: ((pred obj1 obj2) (pred obj2 obj3)) -> (pred obj1 obj3)
 
 """
-
 fact: (y tile5 pos1)
 fact: (y tile4 pos1)
 fact: (y empty pos1)
@@ -39,7 +38,6 @@ fact: (x tile8 pos3)
 fact: (x tile2 pos3)
 
 fact: (blank empty)
-
 
 rule: ((x ?a pos2) (y ?a pos1) (x ?b pos1) (y ?b pos1)) -> (adjacent ?a ?b)
 rule: ((x ?a pos2) (y ?a pos1) (x ?b pos3) (y ?b pos1)) -> (adjacent ?a ?b)

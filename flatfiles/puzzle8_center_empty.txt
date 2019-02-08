@@ -42,7 +42,6 @@ fact: (x tile5 pos3)
 
 fact: (blank empty)
 
-
 rule: ((x ?a pos2) (y ?a pos1) (x ?b pos1) (y ?b pos1)) -> (adjacent ?a ?b)
 rule: ((x ?a pos2) (y ?a pos1) (x ?b pos3) (y ?b pos1)) -> (adjacent ?a ?b)
 rule: ((x ?a pos2) (y ?a pos1) (x ?b pos2) (y ?b pos2)) -> (adjacent ?a ?b)
